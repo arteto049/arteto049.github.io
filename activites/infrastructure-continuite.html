@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Installation et configuration d'éléments d'infrastructure</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+.fiche-activite{
+max-width:1000px;
+margin:40px auto;
+padding:20px;
+}
+
+.fiche-header{
+margin-bottom:50px;
+}
+
+.fiche-header h1{
+font-size:2.7rem;
+margin-bottom:20px;
+color:#58a6ff;
+line-height:1.3;
+}
+
+.fiche-header p{
+font-size:1.1rem;
+line-height:1.9;
+color:#b8c1cc;
+}
+
+.fiche-section{
+background:#161b22;
+border:1px solid #30363d;
+border-radius:16px;
+padding:30px;
+margin-bottom:30px;
+transition:0.3s;
+}
+
+.fiche-section:hover{
+border-color:#58a6ff;
+transform:translateY(-4px);
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+.fiche-section h2{
+font-size:1.8rem;
+margin-bottom:18px;
+color:#58a6ff;
+}
+
+.fiche-section p{
+font-size:1rem;
+line-height:1.9;
+color:#c9d1d9;
+margin-bottom:15px;
+}
+
+.fiche-section ul{
+padding-left:20px;
+color:#c9d1d9;
+}
+
+.fiche-section li{
+margin-bottom:10px;
+line-height:1.7;
+}
+
+.competences-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.competence-card{
+background:#0d1117;
+border:1px solid #30363d;
+border-radius:14px;
+padding:22px;
+}
+
+.competence-card h3{
+color:#58a6ff;
+margin-bottom:12px;
+font-size:1.2rem;
+}
+
+.competence-card p{
+color:#b8c1cc;
+font-size:0.97rem;
+line-height:1.7;
+margin:0;
+}
+
+.back-links{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:30px;
+}
+
+.back-links a{
+display:inline-block;
+text-decoration:none;
+background:#161b22;
+border:1px solid #30363d;
+color:#c9d1d9;
+padding:10px 18px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.back-links a:hover{
+border-color:#58a6ff;
+color:#58a6ff;
+transform:translateY(-2px);
+}
+
+@media (max-width:768px){
+
+.fiche-header h1{
+font-size:2.1rem;
+}
+
+.fiche-section{
+padding:22px;
+}
+
+.fiche-section h2{
+font-size:1.5rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="network-bg"></canvas>
+
+<header>
+
+<a href="../index.html" class="home-btn">
+<i class="fa-solid fa-house"></i> Accueil
+</a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</header>
+
+<div class="menu" id="menu">
+
+<ul>
+<li><a href="../index.html">Accueil</a></li>
+<li><a href="../parc.html">Gestion de parc</a></li>
+<li><a href="../veille.html">Veille technologique</a></li>
+<li class="submenu-parent">
+
+    <div class="submenu-head">
+        <a href="../e5.html" class="submenu-title">Epreuve E5</a>
+        <i class="fa-solid fa-chevron-down submenu-arrow" onclick="toggleSubmenu()"></i>
+    </div>
+
+    <ul class="submenu" id="submenu-e5">
+        <li><a href="../e5-patrimoine.html">Gérer le patrimoine informatique</a></li>
+        <li><a href="../e5-support.html">Répondre aux incidents et aux demandes d’assistance</a></li>
+        <li><a href="../e5-developpement.html">Développer la présence en ligne</a></li>
+        <li><a href="../e5-modeprojet.html">Travailler en mode projet</a></li>
+        <li><a href="../e5-dispo-utilisateurs.html">Mettre à disposition des utilisateurs un service</a></li>
+        <li><a href="../e5-dev-pro.html">Organiser son développement professionnel</a></li>
+    </ul>
+
+</li>
+<li><a href="../e6.html">Epreuve E6</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+
+<main class="container fade-up fiche-activite">
+
+<section class="fiche-header">
+<h1>Installation et configuration d'éléments d'infrastructure</h1>
+<p>
+Cette activité a été réalisée dans le cadre de ma formation en BTS SIO option SISR.
+Elle m’a permis de participer à l’installation et à la configuration d’éléments
+d’infrastructure indispensables au bon fonctionnement du système d’information,
+tout en prenant en compte la qualité et la continuité des services.
+</p>
+</section>
+
+<section class="fiche-section">
+<h2>Contexte</h2>
+<p>
+Dans le cadre de mes apprentissages en administration systèmes et réseaux,
+j’ai été amené à installer et configurer différents éléments d’infrastructure
+nécessaires au fonctionnement d’un environnement informatique.
+</p>
+
+<p>
+Cette activité s’inscrit dans une logique de mise à disposition de services fiables,
+de sécurisation de l’infrastructure et d’amélioration de la continuité de service.
+Elle m’a permis de manipuler des équipements et services essentiels dans une organisation,
+comme des serveurs, des outils réseau ou des composants liés à l’administration du système.
+</p>
+
+<p>
+L’objectif était de comprendre comment mettre en place une infrastructure cohérente,
+fonctionnelle et capable de répondre aux besoins des utilisateurs tout en assurant
+une certaine disponibilité des services.
+</p>
+</section>
+
+<section class="fiche-section">
+<h2>Description de l’activité</h2>
+<p>
+J’ai commencé par préparer l’environnement technique nécessaire à l’installation
+des différents composants d’infrastructure. Cette étape comprenait l’analyse
+des besoins, le choix des éléments à mettre en place et la vérification
+de leur compatibilité avec l’environnement existant.
+</p>
+
+<p>
+J’ai ensuite participé à l’installation et à la configuration de plusieurs services
+et composants d’infrastructure, en veillant à leur bon fonctionnement
+et à leur intégration dans le système d’information.
+</p>
+
+<p>
+Un travail particulier a été réalisé sur la qualité de service,
+notamment à travers la stabilité des configurations, l’organisation des ressources
+et la prise en compte de la continuité de service. Cela inclut par exemple
+la vérification du bon démarrage des services, la disponibilité des ressources
+et la mise en place de mécanismes de sauvegarde ou de redondance lorsque cela était possible.
+</p>
+
+<p>
+Cette activité m’a aussi permis de comprendre l’importance d’une infrastructure bien configurée
+pour limiter les interruptions de service et garantir un environnement de travail fiable
+pour les utilisateurs.
+</p>
+</section>
+
+<section class="fiche-section">
+<h2>Tâches réalisées</h2>
+<ul>
+<li>Préparation de l’environnement technique</li>
+<li>Installation d’éléments d’infrastructure</li>
+<li>Configuration de services nécessaires au fonctionnement du réseau</li>
+<li>Vérification du bon fonctionnement des composants installés</li>
+<li>Tests d’accès et de disponibilité des services</li>
+<li>Prise en compte des mécanismes liés à la continuité de service</li>
+<li>Contrôle de la cohérence de l’infrastructure mise en place</li>
+<li>Documentation des étapes de configuration</li>
+</ul>
+</section>
+
+<section class="fiche-section">
+<h2>Compétences mobilisées</h2>
+
+<div class="competences-grid">
+
+<div class="competence-card">
+<h3>Mettre à disposition des utilisateurs un service informatique</h3>
+<p>
+Cette activité m’a permis d’installer et de configurer des composants nécessaires
+à la mise à disposition de services utilisables par les utilisateurs.
+J’ai ainsi participé à rendre l’environnement informatique opérationnel et fonctionnel.
+</p>
+</div>
+
+<div class="competence-card">
+<h3>Gérer le patrimoine informatique</h3>
+<p>
+L’installation et la configuration d’éléments d’infrastructure m’ont permis
+de mieux comprendre l’organisation des ressources informatiques d’une entreprise
+et leur rôle dans le fonctionnement global du système d’information.
+</p>
+</div>
+
+<div class="competence-card">
+<h3>Travailler en mode projet</h3>
+<p>
+Cette activité a été menée de manière structurée, avec des étapes de préparation,
+d’installation, de vérification et d’ajustement. Elle s’inscrit dans une logique
+de déploiement progressif et méthodique d’une infrastructure informatique.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="fiche-section">
+<h2>Conclusion</h2>
+<p>
+Cette activité m’a permis de développer mes compétences en installation
+et configuration d’infrastructure informatique, tout en prenant en compte
+les notions de qualité de service et de continuité d’activité.
+</p>
+
+<p>
+J’ai pu mieux comprendre le rôle central de l’infrastructure dans la disponibilité
+des services informatiques et dans la fiabilité de l’environnement de travail proposé
+aux utilisateurs.
+</p>
+
+<p>
+Cette expérience a renforcé mes compétences en administration systèmes et réseaux
+et s’inscrit pleinement dans mon projet professionnel orienté vers
+la gestion et l’exploitation des infrastructures informatiques.
+</p>
+</section>
+
+<div class="back-links">
+<a href="../e5-dispo-utilisateurs.html"><i class="fa-solid fa-arrow-left"></i> Retour E5 Services</a>
+<a href="../e5-patrimoine.html"><i class="fa-solid fa-arrow-left"></i> Retour E5 Patrimoine</a>
+<a href="../e5-modeprojet.html"><i class="fa-solid fa-arrow-left"></i> Retour E5 Mode projet</a>
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 Portfolio BTS SIO</p>
+</footer>
+
+<script src="../js/menu.js"></script>
+<script src="../js/network-bg.js"></script>
+
+</body>
+</html>

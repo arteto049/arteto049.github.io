@@ -1,0 +1,333 @@
+/* HERO (titre + présentation) */
+
+.hero{
+text-align:center;
+padding:120px 20px 80px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:25px;
+color:#58a6ff;
+}
+
+.hero-description{
+max-width:850px;
+margin:auto;
+font-size:1.2rem;
+line-height:1.9;
+color:#b8c1cc;
+margin-bottom:35px;
+}
+
+
+/* BOUTON CV */
+
+
+.btn-cv{
+display:inline-flex;
+align-items:center;
+gap:10px;
+
+padding:14px 28px;
+
+font-size:1.05rem;
+font-weight:500;
+
+text-decoration:none;
+color:rgb(255, 255, 255);
+
+background:linear-gradient(135deg,#104b8d,#1f6feb);
+
+border-radius:12px;
+
+box-shadow:0 8px 20px rgba(31,111,235,0.35);
+
+transition:all 0.3s ease;
+}
+
+.btn-cv:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 28px rgba(31,111,235,0.5);
+
+background:linear-gradient(135deg,#79c0ff,#388bfd);
+
+}
+
+.btn-cv i{
+font-size:1.1rem;
+}
+
+
+/* SECTIONS */
+
+.index-section{
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+gap:200px;
+margin:150px 0;
+
+position:relative;
+flex-wrap:wrap;
+}
+
+.index-section.reverse{
+flex-direction:row-reverse;
+}
+
+
+/* CARTE TEXTE */
+
+.section-text{
+flex:1;
+min-width:280px;
+
+background:#161b22;
+border:1px solid #30363d;
+border-radius:18px;
+
+padding:35px;
+
+transition:0.3s;
+}
+
+.section-text:hover{
+transform:translateY(-6px);
+border-color:#58a6ff;
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+.section-text h2{
+font-size:2.3rem;
+margin-bottom:20px;
+}
+
+.section-text h2 a{
+color:#58a6ff;
+text-decoration:none;
+transition:0.3s;
+}
+
+.section-text h2 a:hover{
+color:#79c0ff;
+}
+
+.section-text p{
+font-size:1.1rem;
+line-height:1.8;
+color:#b8c1cc;
+}
+
+
+/* IMAGE */
+
+.section-image{
+flex:1;
+text-align:center;
+min-width:280px;
+}
+
+.section-image img{
+width:100%;
+max-width:600px;
+transition:0.3s;
+}
+
+.section-image img:hover{
+transform:scale(1.03);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+.hero h1{
+font-size:3rem;
+}
+
+.hero-description{
+font-size:1.05rem;
+}
+
+.index-section{
+gap:40px;
+margin:80px 0;
+}
+
+.section-text h2{
+font-size:1.9rem;
+}
+
+.section-text p{
+font-size:1rem;
+}
+
+.section-image img{
+max-width:100%;
+}
+
+}
+
+/* CONTENEUR PRINCIPAL */
+
+.container{
+position:relative;
+max-width:1200px;
+margin:auto;
+}
+
+/* LIGNE TIMELINE */
+
+.container::before{
+content:"";
+position:absolute;
+left:50%;
+top:773px;
+bottom:0;
+width:2px;
+background:#58a6ff;
+transform:translateX(-50%);
+box-shadow:
+0 0 6px rgba(88,166,255,0.45),
+0 0 14px rgba(88,166,255,0.28),
+0 0 24px rgba(88,166,255,0.14);
+z-index:0;
+}
+
+.container::after{
+content:"";
+position:absolute;
+
+left:50%;
+top:773px;
+
+width:4px;
+height:80px;
+
+transform:translateX(-50%);
+
+background:linear-gradient(
+to bottom,
+rgba(88,166,255,0),
+rgba(88,166,255,0.9),
+rgba(88,166,255,0)
+);
+
+filter:blur(1px);
+
+animation:timelineFlow 4s linear infinite;
+}
+
+
+
+.index-section::before{
+content:"";
+
+position:absolute;
+left:50%;
+top:50%;
+
+width:14px;
+height:14px;
+
+background:#58a6ff;
+border-radius:50%;
+
+transform:translate(-50%, -50%);
+box-shadow:0 0 10px rgba(88,166,255,0.6);
+}
+
+.section-text{
+flex:1;
+min-width:280px;
+
+background:#161b22;
+border:1px solid #30363d;
+border-radius:18px;
+
+padding:35px;
+
+transition:0.3s;
+
+text-decoration:none;
+color:inherit;
+display:block;
+}
+
+.section-text:hover{
+transform:translateY(-6px);
+border-color:#58a6ff;
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+.section-text h2{
+color:#58a6ff;
+margin-bottom:20px;
+}
+
+/* =========================
+   PARTICULES FOND
+========================= */
+
+#particles{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-2;
+pointer-events:none;
+}
+
+/* =========================
+   GLOW CONTOUR CARDS
+========================= */
+
+.section-text{
+transition: 
+transform 0.3s ease,
+border-color 0.3s ease,
+box-shadow 0.3s ease;
+}
+
+/* glow uniquement autour */
+
+.section-text:hover{
+border-color:#58a6ff;
+
+box-shadow:
+0 0 0 1px rgba(88,166,255,0.35),
+0 0 15px rgba(88,166,255,0.25),
+0 0 35px rgba(88,166,255,0.12),
+0 10px 30px rgba(0,0,0,0.35);
+
+transform:translateY(-6px);
+}
+
+@keyframes timelineFlow{
+
+0%{
+transform:translate(-50%,0);
+opacity:0;
+}
+
+10%{
+opacity:1;
+}
+
+90%{
+opacity:1;
+}
+
+100%{
+transform:translate(-50%,800px);
+opacity:0;
+}
+
+}
+

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mettre à disposition des utilisateurs un service informatique - E5</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+.hero-competence{
+margin-top:20px;
+margin-bottom:70px;
+max-width:900px;
+}
+
+.hero-competence h1{
+font-size:2.6rem;
+margin-bottom:20px;
+}
+
+.hero-competence p{
+font-size:1.1rem;
+line-height:1.9;
+color:#b8c1cc;
+}
+
+/* ACTIVITES */
+
+.activities-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.activity-card{
+display:block;
+text-decoration:none;
+background:#161b22;
+border:1px solid #30363d;
+padding:28px;
+border-radius:14px;
+transition:0.3s;
+color:#c9d1d9;
+}
+
+.activity-card:hover{
+transform:translateY(-6px);
+border-color:#58a6ff;
+}
+
+.activity-card h3{
+margin-bottom:10px;
+color:#58a6ff;
+font-size:1.2rem;
+}
+
+.activity-card p{
+font-size:0.95rem;
+line-height:1.6;
+color:#aeb7c2;
+}
+
+.activity-icon{
+font-size:1.4rem;
+margin-bottom:12px;
+color:#58a6ff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+<canvas id="network-bg"></canvas>
+
+<header>
+
+<a href="index.html" class="home-btn">
+<i class="fa-solid fa-house"></i> Accueil
+</a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</header>
+
+<!-- MENU -->
+
+<div class="menu" id="menu">
+
+<ul>
+
+<li><a href="index.html">Accueil</a></li>
+<li><a href="parc.html">Gestion de parc</a></li>
+<li><a href="veille.html">Veille technologique</a></li>
+<li class="submenu-parent">
+
+    <div class="submenu-head">
+        <a href="e5.html" class="submenu-title">Epreuve E5</a>
+        <i class="fa-solid fa-chevron-down submenu-arrow" onclick="toggleSubmenu()"></i>
+    </div>
+
+    <ul class="submenu" id="submenu-e5">
+        <li><a href="e5-patrimoine.html">Gérer le patrimoine informatique</a></li>
+        <li><a href="e5-support.html">Répondre aux incidents et aux demandes d’assistance</a></li>
+        <li><a href="e5-developpement.html">Développer la présence en ligne</a></li>
+        <li><a href="e5-modeprojet.html">Travailler en mode projet</a></li>
+        <li><a href="e5-dispo-utilisateurs.html">Mettre à disposition des utilisateurs un service</a></li>
+        <li><a href="e5-dev-pro.html">Organiser son développement professionnel</a></li>
+    </ul>
+
+</li>
+<li><a href="e6.html">Epreuve E6</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</div>
+
+<!-- CONTENU -->
+
+<main class="container fade-up">
+
+<section class="hero-competence">
+
+<h1>Mettre à disposition des utilisateurs un service informatique</h1>
+
+<p>
+Cette compétence consiste à déployer, configurer et rendre accessibles
+des services informatiques répondant aux besoins des utilisateurs.
+Elle inclut l'installation, les tests, la mise en production et la vérification du bon fonctionnement.
+</p>
+
+</section>
+
+<h2>Activités réalisées</h2>
+
+<div class="activities-grid">
+
+<a href="activites/portfolio.html" class="activity-card">
+
+<div class="activity-icon">
+<i class="fa-solid fa-diagram-project"></i>
+</div>
+
+<h3>Création du site web - Portfolio</h3>
+
+<p>
+Développement du portfolio en suivant une démarche structurée :
+analyse, conception, intégration, tests et amélioration.
+</p>
+
+</a>
+
+<a href="activites/infrastructure-continuite.html" class="activity-card">
+
+<div class="activity-icon">
+<i class="fa-solid fa-server"></i>
+</div>
+
+<h3>Installation et configuration d'éléments d'infrastructure</h3>
+
+<p>
+Mise en place de composants et services nécessaires au bon fonctionnement
+et à la disponibilité de l’infrastructure.
+</p>
+
+</a>
+
+<a href="activites/deploiement-serveurs.html" class="activity-card">
+
+<div class="activity-icon">
+<i class="fa-solid fa-server"></i>
+</div>
+
+<h3>Déploiement de serveurs</h3>
+
+<p>
+Installation et configuration de serveurs permettant
+de fournir des services aux utilisateurs.
+</p>
+
+</a>
+
+<a href="activites/deploiement-service-windows.html" class="activity-card">
+
+<div class="activity-icon">
+<i class="fa-solid fa-server"></i>
+</div>
+
+<h3>Déploiement de services Windows</h3>
+
+<p>
+Mise en place de services permettant de fournir
+des ressources aux utilisateurs du réseau.
+</p>
+
+</a>
+
+<a href="activites/reseau-physique.html" class="activity-card">
+
+<div class="activity-icon">
+<i class="fa-solid fa-network-wired"></i>
+</div>
+
+<h3>Création d'un réseau physique</h3>
+
+<p>
+Mise en place d’une infrastructure réseau permettant l’accès
+aux services et aux ressources informatiques.
+</p>
+
+</a>
+
+<a href="activites/serveur-virtuel-hyperv-ad.html" class="activity-card">
+
+<div class="activity-icon">
+<i class="fa-solid fa-users"></i>
+</div>
+
+<h3>Serveur virtuel et Active Directory</h3>
+
+<p>
+Déploiement d’un service de gestion des utilisateurs
+et des ressources réseau.
+</p>
+
+</a>
+
+<a href="activites/services-windows-reseau.html" class="activity-card">
+
+<div class="activity-icon">
+<i class="fa-solid fa-server"></i>
+</div>
+
+<h3>Déploiement des services DNS, WSUS, DHCP, AD-DS, DFS</h3>
+
+<p>
+Mise en place de services réseau et systèmes permettant
+de fournir des ressources essentielles aux utilisateurs.
+</p>
+
+</a>
+
+<a href="activites/preventif-controle-postes.html" class="activity-card">
+    <div class="activity-icon">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+    </div>
+    <h3>Préventif et contrôle des postes informatiques</h3>
+    <p>Maintenance préventive, contrôles réguliers et vérification du bon fonctionnement des postes informatiques.</p>
+</a>
+
+<a href="activites/gestionnaire-mot-de-passe.html" class="activity-card">
+    <div class="activity-icon">
+        <i class="fa-solid fa-key"></i>
+    </div>
+    <h3>Mise en place d'un gestionnaire de mot de passe</h3>
+    <p>Déploiement d’une solution de gestion des identifiants afin d’améliorer la sécurité des accès.</p>
+</a>
+
+
+</div>
+
+</main>
+
+<footer>
+
+<p>© 2026 Portfolio BTS SIO</p>
+
+</footer>
+
+<script src="js/menu.js"></script>
+<script src="js/network-bg.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Réalisation d'algorithmes en langage Python</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+.fiche-activite{
+max-width:1000px;
+margin:40px auto;
+padding:100px;
+}
+
+.fiche-header{
+margin-bottom:50px;
+}
+
+.fiche-header h1{
+font-size:2.7rem;
+margin-bottom:20px;
+color:#58a6ff;
+line-height:1.3;
+}
+
+.fiche-header p{
+font-size:1.1rem;
+line-height:1.9;
+color:#b8c1cc;
+}
+
+.fiche-section{
+background:#161b22;
+border:1px solid #30363d;
+border-radius:16px;
+padding:30px;
+margin-bottom:30px;
+transition:0.3s;
+}
+
+.fiche-section:hover{
+border-color:#58a6ff;
+transform:translateY(-4px);
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+.fiche-section h2{
+font-size:1.8rem;
+margin-bottom:18px;
+color:#58a6ff;
+}
+
+.fiche-section p{
+font-size:1rem;
+line-height:1.9;
+color:#c9d1d9;
+margin-bottom:15px;
+}
+
+.fiche-section ul{
+padding-left:20px;
+color:#c9d1d9;
+}
+
+.fiche-section li{
+margin-bottom:10px;
+line-height:1.7;
+}
+
+.competences-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.competence-card{
+background:#0d1117;
+border:1px solid #30363d;
+border-radius:14px;
+padding:22px;
+}
+
+.competence-card h3{
+color:#58a6ff;
+margin-bottom:12px;
+font-size:1.2rem;
+}
+
+.competence-card p{
+color:#b8c1cc;
+font-size:0.97rem;
+line-height:1.7;
+margin:0;
+}
+
+.back-links{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:30px;
+}
+
+.back-links a{
+display:inline-block;
+text-decoration:none;
+background:#161b22;
+border:1px solid #30363d;
+color:#c9d1d9;
+padding:10px 18px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.back-links a:hover{
+border-color:#58a6ff;
+color:#58a6ff;
+transform:translateY(-2px);
+}
+
+@media (max-width:768px){
+
+.fiche-activite{
+padding:30px;
+}
+
+.fiche-header h1{
+font-size:2.1rem;
+}
+
+.fiche-section{
+padding:22px;
+}
+
+.fiche-section h2{
+font-size:1.5rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="network-bg"></canvas>
+
+<header>
+
+<a href="../index.html" class="home-btn">
+<i class="fa-solid fa-house"></i> Accueil
+</a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</header>
+
+<div class="menu" id="menu">
+
+<ul>
+<li><a href="../index.html">Accueil</a></li>
+<li><a href="../parc.html">Gestion de parc</a></li>
+<li><a href="../veille.html">Veille technologique</a></li>
+<li class="submenu-parent">
+
+    <div class="submenu-head">
+        <a href="../e5.html" class="submenu-title">Epreuve E5</a>
+        <i class="fa-solid fa-chevron-down submenu-arrow" onclick="toggleSubmenu()"></i>
+    </div>
+
+    <ul class="submenu" id="submenu-e5">
+        <li><a href="../e5-patrimoine.html">Gérer le patrimoine informatique</a></li>
+        <li><a href="../e5-support.html">Répondre aux incidents et aux demandes d’assistance</a></li>
+        <li><a href="../e5-developpement.html">Développer la présence en ligne</a></li>
+        <li><a href="../e5-modeprojet.html">Travailler en mode projet</a></li>
+        <li><a href="../e5-dispo-utilisateurs.html">Mettre à disposition des utilisateurs un service</a></li>
+        <li><a href="../e5-dev-pro.html">Organiser son développement professionnel</a></li>
+    </ul>
+
+</li>
+<li><a href="../e6.html">Epreuve E6</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+
+<main class="container fade-up fiche-activite">
+
+<section class="fiche-header">
+<h1>Réalisation d'algorithmes en langage Python</h1>
+<p>
+Cette activité a été réalisée dans le cadre de ma formation en BTS SIO option SISR.
+Elle m’a permis de développer des scripts et des algorithmes en langage Python afin
+d’automatiser certaines tâches et de manipuler des données de manière logique
+et structurée.
+</p>
+</section>
+
+<section class="fiche-section">
+<h2>Contexte</h2>
+<p>
+Dans le cadre de mes apprentissages en programmation, j’ai été amené à utiliser
+le langage Python afin de réaliser différents algorithmes. Cette activité avait
+pour objectif de comprendre la logique de programmation et d’apprendre à écrire
+des scripts permettant de traiter des données ou d’automatiser certaines opérations.
+</p>
+
+<p>
+Le langage Python a été utilisé pour sa simplicité et sa lisibilité, ce qui
+permet de se concentrer sur la logique algorithmique et la structuration
+du programme.
+</p>
+</section>
+
+<section class="fiche-section">
+<h2>Description de l’activité</h2>
+<p>
+J’ai réalisé plusieurs scripts Python permettant de mettre en œuvre des
+structures algorithmiques comme les conditions, les boucles et les fonctions.
+Ces scripts permettent d’effectuer des traitements automatisés ou
+de manipuler des informations fournies par l’utilisateur.
+</p>
+
+<p>
+Cette activité m’a permis de comprendre comment organiser un programme,
+comment structurer le code pour qu’il soit lisible et maintenable
+et comment tester les différentes fonctionnalités mises en place.
+</p>
+
+<p>
+J’ai également appris à corriger les erreurs dans le code et à améliorer
+les scripts afin d’obtenir un fonctionnement fiable.
+</p>
+</section>
+
+<section class="fiche-section">
+<h2>Tâches réalisées</h2>
+<ul>
+<li>Création de scripts en langage Python</li>
+<li>Mise en place d’algorithmes simples</li>
+<li>Utilisation de conditions et de boucles</li>
+<li>Création et utilisation de fonctions</li>
+<li>Manipulation de données en entrée et en sortie</li>
+<li>Tests et corrections des programmes</li>
+<li>Amélioration de la structure et de la lisibilité du code</li>
+</ul>
+</section>
+
+<section class="fiche-section">
+<h2>Compétences mobilisées</h2>
+
+<div class="competences-grid">
+
+<div class="competence-card">
+<h3>Développer la présence en ligne de l’organisation</h3>
+<p>
+La programmation permet de créer des outils et des fonctionnalités
+informatiques pouvant être intégrés dans des services numériques.
+Cette activité m’a permis de comprendre les bases du développement
+et de la logique de programmation utilisées dans les applications web
+et les services en ligne.
+</p>
+</div>
+
+<div class="competence-card">
+<h3>Travailler en mode projet</h3>
+<p>
+La réalisation de scripts nécessite une organisation du travail,
+une analyse du besoin et une structuration du code afin d’obtenir
+une solution fonctionnelle et maintenable.
+</p>
+</div>
+
+<div class="competence-card">
+<h3>Mettre à disposition des utilisateurs un service informatique</h3>
+<p>
+Les scripts développés peuvent être utilisés pour automatiser
+certaines tâches informatiques et faciliter le travail
+des utilisateurs ou des administrateurs système.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="fiche-section">
+<h2>Conclusion</h2>
+<p>
+Cette activité m’a permis de découvrir et de pratiquer la programmation
+avec le langage Python.
+</p>
+
+<p>
+J’ai appris à structurer un programme, à utiliser différentes
+structures algorithmiques et à tester le bon fonctionnement
+des scripts réalisés.
+</p>
+
+<p>
+Ces compétences constituent une base importante pour le développement
+de solutions informatiques et l’automatisation de certaines tâches
+dans un environnement professionnel.
+</p>
+</section>
+
+<div class="back-links">
+<a href="../e5-developpement.html"><i class="fa-solid fa-arrow-left"></i> Retour E5 Présence en ligne</a>
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 Portfolio BTS SIO</p>
+</footer>
+
+<script src="../js/menu.js"></script>
+<script src="../js/network-bg.js"></script>
+
+</body>
+</html>

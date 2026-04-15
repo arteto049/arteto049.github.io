@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epreuve E5 - Portfolio BTS SIO</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    .e5-hero {
+      margin-top: 20px;
+      margin-bottom: 80px;
+      max-width: 900px;
+    }
+
+    .e5-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 24px;
+    }
+
+    .e5-hero p {
+      font-size: 1.15rem;
+      line-height: 1.9;
+      color: #b8c1cc;
+    }
+
+    .e5-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin-top: 30px;
+      margin-bottom: 60px;
+    }
+
+    .e5-card {
+      display: block;
+      text-decoration: none;
+      color: #c9d1d9;
+      background: linear-gradient(180deg, #161b22 0%, #11161d 100%);
+      border: 1px solid #30363d;
+      border-radius: 18px;
+      padding: 30px 28px;
+      min-height: 220px;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .e5-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(88,166,255,0.10), transparent 45%);
+      pointer-events: none;
+    }
+
+    .e5-card:hover {
+      transform: translateY(-8px);
+      border-color: #58a6ff;
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+    }
+
+    .e5-card-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(88, 166, 255, 0.12);
+      color: #58a6ff;
+      font-size: 1.4rem;
+      margin-bottom: 22px;
+      border: 1px solid rgba(88, 166, 255, 0.18);
+    }
+
+    .e5-card h2 {
+      font-size: 1.35rem;
+      line-height: 1.4;
+      margin: 0 0 14px 0;
+      color: #f0f6fc;
+    }
+
+    .e5-card p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #aeb7c2;
+    }
+
+    .e5-card span {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+      color: #58a6ff;
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+
+    .e5-note {
+      margin-top: 30px;
+      padding: 22px 24px;
+      border: 1px solid #30363d;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.02);
+      color: #aeb7c2;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      .e5-hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .e5-card {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+<canvas id="network-bg"></canvas>
+
+  <header>
+
+<a href="index.html" class="home-btn">
+<i class="fa-solid fa-house"></i> Accueil
+</a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</header>
+
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="parc.html">Gestion de parc</a></li>
+      <li><a href="veille.html">Veille technologique</a></li>
+      <li class="submenu-parent">
+
+    <div class="submenu-head">
+        <a href="e5.html" class="submenu-title">Epreuve E5</a>
+        <i class="fa-solid fa-chevron-down submenu-arrow" onclick="toggleSubmenu()"></i>
+    </div>
+
+    <ul class="submenu" id="submenu-e5">
+        <li><a href="e5-patrimoine.html">Gérer le patrimoine informatique</a></li>
+        <li><a href="e5-support.html">Répondre aux incidents et aux demandes d’assistance</a></li>
+        <li><a href="e5-developpement.html">Développer la présence en ligne</a></li>
+        <li><a href="e5-modeprojet.html">Travailler en mode projet</a></li>
+        <li><a href="e5-dispo-utilisateurs.html">Mettre à disposition des utilisateurs un service</a></li>
+        <li><a href="e5-dev-pro.html">Organiser son développement professionnel</a></li>
+    </ul>
+
+</li>
+      <li><a href="e6.html">Epreuve E6</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <main class="container fade-up">
+
+    <section class="e5-hero">
+      <h1>Epreuve E5</h1>
+      <p>
+        L’épreuve E5 du BTS SIO permet de présenter les activités professionnelles réalisées durant la formation.
+        Elle met en avant les compétences mobilisées dans des situations concrètes, en lien avec l’administration,
+        le support, la mise à disposition de services, l’organisation du travail et l’évolution professionnelle.
+        Cliquez sur une compétence pour accéder aux activités qui lui sont associées, puis aux fiches détaillées.
+      </p>
+
+      <div class="pdf-access">
+        <a href="documents/DA SILVA Aristide - Tableau de synthèse - Epreuve E5 - BTS SIO.pdf" target="_blank" class="pdf-btn">
+          <i class="fa-solid fa-file-pdf"></i> Consulter le tableau de synthèse
+        </a>
+      </div>
+
+    </section>
+
+      
+
+
+    <section class="e5-grid">
+
+      <a href="e5-patrimoine.html" class="e5-card fade-up">
+        <div class="e5-card-icon">
+          <i class="fa-solid fa-server"></i>
+        </div>
+        <h2>Gérer le patrimoine informatique</h2>
+        <p>
+          Recenser, suivre et administrer les équipements, services et ressources du système d’information.
+        </p>
+        <span>Voir les activités <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a href="e5-support.html" class="e5-card fade-up">
+        <div class="e5-card-icon">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h2>Répondre aux incidents et aux demandes d’assistance et d’évolution</h2>
+        <p>
+          Prendre en charge les demandes utilisateurs, traiter les incidents et proposer des améliorations.
+        </p>
+        <span>Voir les activités <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a href="e5-developpement.html" class="e5-card fade-up">
+        <div class="e5-card-icon">
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <h2>Développer la présence en ligne de l’organisation</h2>
+        <p>
+          Participer à la valorisation des services numériques et à la visibilité de l’organisation en ligne.
+        </p>
+        <span>Voir les activités <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a href="e5-dispo-utilisateurs.html" class="e5-card fade-up">
+        <div class="e5-card-icon">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <h2>Mettre à disposition des utilisateurs un service informatique</h2>
+        <p>
+          Déployer, configurer et rendre accessibles des services répondant aux besoins des utilisateurs.
+        </p>
+        <span>Voir les activités <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a href="e5-modeprojet.html" class="e5-card fade-up">
+        <div class="e5-card-icon">
+          <i class="fa-solid fa-diagram-project"></i>
+        </div>
+        <h2>Travailler en mode projet</h2>
+        <p>
+          Organiser les tâches, planifier les étapes et collaborer dans le cadre d’un projet informatique.
+        </p>
+        <span>Voir les activités <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a href="e5-dev-pro.html" class="e5-card fade-up">
+        <div class="e5-card-icon">
+          <i class="fa-solid fa-book-open-reader"></i>
+        </div>
+        <h2>Organiser son développement professionnel</h2>
+        <p>
+          Développer ses compétences, effectuer une veille et faire évoluer ses pratiques professionnelles.
+        </p>
+        <span>Voir les activités <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+    </section>
+
+    <div class="e5-note fade-up">
+      Chaque compétence regroupe plusieurs activités réalisées pendant ma formation. Une même activité peut apparaître
+      dans plusieurs compétences lorsqu’elle mobilise plusieurs savoir-faire, comme par exemple la gestion de parc
+      avec GLPI, qui peut relever à la fois du patrimoine informatique, du support et du travail en mode projet.
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Portfolio BTS SIO</p>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script src="js/network-bg.js"></script>
+
+</body>
+</html>

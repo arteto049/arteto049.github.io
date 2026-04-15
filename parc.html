@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<title>Gestion de parc</title>
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+.parc-page{
+max-width:1100px;
+margin:0 auto;
+padding:120px 20px 80px;
+}
+
+.parc-hero{
+text-align:center;
+margin-bottom:60px;
+}
+
+.parc-hero h1{
+font-size:4rem;
+margin-bottom:25px;
+color:#58a6ff;
+}
+
+.parc-hero p{
+max-width:850px;
+margin:auto;
+font-size:1.2rem;
+line-height:1.9;
+color:#b8c1cc;
+margin-bottom:20px;
+}
+
+.parc-badge{
+display:inline-block;
+margin-top:12px;
+padding:12px 22px;
+background:#161b22;
+border:1px solid #30363d;
+border-radius:14px;
+color:#f0f6fc;
+font-size:1rem;
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+.parc-intro{
+background:linear-gradient(135deg, rgba(16,75,141,0.22), rgba(31,111,235,0.14));
+border:1px solid #2f81f7;
+border-radius:20px;
+padding:35px;
+margin-bottom:40px;
+box-shadow:0 8px 24px rgba(0,0,0,0.2);
+}
+
+.parc-intro h2{
+font-size:2rem;
+margin-bottom:18px;
+color:#79c0ff;
+}
+
+.parc-intro p{
+font-size:1.08rem;
+line-height:1.9;
+color:#d0d7de;
+margin-bottom:14px;
+}
+
+.parc-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+gap:30px;
+margin-bottom:40px;
+}
+
+.parc-card{
+background:#161b22;
+border:1px solid #30363d;
+border-radius:20px;
+padding:35px;
+transition:0.3s;
+box-shadow:0 8px 24px rgba(0,0,0,0.18);
+}
+
+.parc-card:hover{
+transform:translateY(-6px);
+border-color:#58a6ff;
+box-shadow:0 14px 32px rgba(0,0,0,0.3);
+}
+
+.parc-card h2{
+font-size:2rem;
+margin-bottom:20px;
+color:#58a6ff;
+}
+
+.parc-card p{
+font-size:1.08rem;
+line-height:1.8;
+color:#b8c1cc;
+margin-bottom:16px;
+}
+
+.parc-card ul{
+padding-left:22px;
+margin-top:10px;
+}
+
+.parc-card li{
+margin-bottom:12px;
+line-height:1.7;
+color:#b8c1cc;
+font-size:1.05rem;
+}
+
+.parc-large{
+background:#161b22;
+border:1px solid #30363d;
+border-radius:20px;
+padding:40px;
+margin-bottom:40px;
+box-shadow:0 8px 24px rgba(0,0,0,0.18);
+transition:0.3s;
+}
+
+.parc-large:hover{
+border-color:#58a6ff;
+box-shadow:0 14px 32px rgba(0,0,0,0.3);
+}
+
+.parc-large h2{
+font-size:2.2rem;
+margin-bottom:20px;
+color:#58a6ff;
+}
+
+.parc-large p{
+font-size:1.08rem;
+line-height:1.9;
+color:#b8c1cc;
+margin-bottom:16px;
+}
+
+.tools-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.tool-box{
+background:#0d1117;
+border:1px solid #30363d;
+border-radius:18px;
+padding:28px;
+transition:0.3s;
+text-align:left;
+height:100%;
+}
+
+.tool-box:hover{
+transform:translateY(-5px);
+border-color:#58a6ff;
+box-shadow:0 10px 24px rgba(0,0,0,0.25);
+}
+
+.tool-box h3{
+font-size:1.5rem;
+margin-bottom:15px;
+color:#58a6ff;
+}
+
+.tool-box p{
+font-size:1.02rem;
+line-height:1.8;
+color:#b8c1cc;
+margin:0;
+}
+
+.sources-list{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.source-item{
+background:#0d1117;
+border:1px solid #30363d;
+border-radius:16px;
+padding:22px;
+transition:0.3s;
+}
+
+.source-item:hover{
+border-color:#58a6ff;
+transform:translateY(-4px);
+}
+
+.source-item h3{
+color:#58a6ff;
+font-size:1.2rem;
+margin-bottom:10px;
+}
+
+.source-item p{
+color:#b8c1cc;
+font-size:1rem;
+line-height:1.7;
+margin:0;
+}
+
+.highlight-box{
+background:linear-gradient(135deg, rgba(16,75,141,0.25), rgba(31,111,235,0.18));
+border:1px solid #2f81f7;
+border-radius:20px;
+padding:35px;
+margin-top:20px;
+box-shadow:0 8px 24px rgba(0,0,0,0.2);
+}
+
+.highlight-box h2{
+font-size:2rem;
+margin-bottom:18px;
+color:#79c0ff;
+}
+
+.highlight-box p{
+font-size:1.08rem;
+line-height:1.9;
+color:#d0d7de;
+margin-bottom:14px;
+}
+
+.icon{
+font-size:2rem;
+display:block;
+margin-bottom:15px;
+}
+
+@media (max-width:900px){
+
+.parc-page{
+padding:100px 20px 60px;
+}
+
+.parc-hero h1{
+font-size:3rem;
+}
+
+.parc-hero p{
+font-size:1.05rem;
+}
+
+.parc-card h2,
+.parc-large h2,
+.highlight-box h2,
+.parc-intro h2{
+font-size:1.7rem;
+}
+
+.parc-card,
+.parc-large,
+.highlight-box,
+.parc-intro,
+.tool-box,
+.source-item{
+padding:25px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+<canvas id="network-bg"></canvas>
+
+<header>
+
+<a href="index.html" class="home-btn">
+<i class="fa-solid fa-house"></i> Accueil
+</a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</header>
+
+<div class="menu" id="menu">
+
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="parc.html">Gestion de parc</a></li>
+<li><a href="veille.html">Veille technologique</a></li>
+<li class="submenu-parent">
+
+    <div class="submenu-head">
+        <a href="e5.html" class="submenu-title">Epreuve E5</a>
+        <i class="fa-solid fa-chevron-down submenu-arrow" onclick="toggleSubmenu()"></i>
+    </div>
+
+    <ul class="submenu" id="submenu-e5">
+        <li><a href="e5-patrimoine.html">Gérer le patrimoine informatique</a></li>
+        <li><a href="e5-support.html">Répondre aux incidents et aux demandes d’assistance</a></li>
+        <li><a href="e5-developpement.html">Développer la présence en ligne</a></li>
+        <li><a href="e5-modeprojet.html">Travailler en mode projet</a></li>
+        <li><a href="e5-dispo-utilisateurs.html">Mettre à disposition des utilisateurs un service</a></li>
+        <li><a href="e5-dev-pro.html">Organiser son développement professionnel</a></li>
+    </ul>
+
+</li>
+<li><a href="e6.html">Epreuve E6</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</div>
+
+<div class="parc-page">
+
+<div class="parc-hero">
+<h1>Gestion de parc</h1>
+
+<p>
+La gestion de parc informatique consiste à administrer, suivre et maintenir l’ensemble
+des équipements informatiques d’une organisation afin d’assurer leur bon fonctionnement,
+leur disponibilité et leur évolution.
+</p>
+
+<div class="parc-badge">
+Sujet : <strong>gestion et suivi du parc informatique</strong>
+</div>
+</div>
+
+<div class="parc-intro">
+<h2>Objectif de la gestion de parc</h2>
+<p>
+La gestion de parc permet d’avoir une vision claire de tous les équipements présents
+dans une infrastructure informatique : postes de travail, serveurs, imprimantes,
+équipements réseau ou encore logiciels installés.
+</p>
+<p>
+Elle est essentielle pour assurer un bon suivi du matériel, anticiper les besoins,
+faciliter les interventions techniques et améliorer l’organisation du système d’information.
+</p>
+</div>
+
+<div class="parc-grid">
+
+<div class="parc-card">
+<span class="icon">🖥️</span>
+<h2>Qu’est-ce que la gestion de parc ?</h2>
+<p>
+La gestion de parc informatique regroupe l’ensemble des actions permettant
+de recenser, organiser, surveiller et maintenir les équipements informatiques.
+</p>
+<p>
+Elle permet de connaître précisément les ressources disponibles et leur état.
+</p>
+<ul>
+<li><strong>Inventorier</strong> les équipements et logiciels</li>
+<li><strong>Suivre</strong> l’état du matériel</li>
+<li><strong>Planifier</strong> les remplacements ou mises à jour</li>
+<li><strong>Centraliser</strong> les informations techniques</li>
+</ul>
+</div>
+
+<div class="parc-card">
+<span class="icon">📋</span>
+<h2>Dans quelles situations l’utilise-t-on ?</h2>
+<p>
+La gestion de parc est utilisée dans de nombreuses situations du quotidien informatique.
+Elle facilite l’administration et le support des équipements.
+</p>
+<ul>
+<li>suivre les ordinateurs et leurs caractéristiques</li>
+<li>gérer les logiciels installés et leurs versions</li>
+<li>organiser les interventions de maintenance</li>
+<li>identifier rapidement un équipement en panne</li>
+<li>préparer le renouvellement du matériel</li>
+<li>avoir un historique des équipements et incidents</li>
+</ul>
+</div>
+
+</div>
+
+<div class="parc-large">
+<h2>Pourquoi la gestion de parc est importante ?</h2>
+<p>
+Une bonne gestion de parc permet de gagner du temps, d’améliorer l’organisation
+et de mieux sécuriser l’environnement informatique. Elle aide également à réduire
+les oublis, à mieux planifier les achats et à suivre plus facilement les incidents.
+</p>
+
+<div class="tools-grid">
+<div class="tool-box">
+<h3>Suivi du matériel</h3>
+<p>
+Permet de savoir quels équipements sont en service, où ils se trouvent et dans quel état ils sont.
+</p>
+</div>
+
+<div class="tool-box">
+<h3>Suivi logiciel</h3>
+<p>
+Permet d’identifier les logiciels installés, leurs versions et leurs éventuelles mises à jour.
+</p>
+</div>
+
+<div class="tool-box">
+<h3>Maintenance</h3>
+<p>
+Facilite l’organisation des interventions et le traitement des pannes ou anomalies.
+</p>
+</div>
+
+<div class="tool-box">
+<h3>Historique</h3>
+<p>
+Conserve une trace des modifications, des incidents et des actions réalisées sur les équipements.
+</p>
+</div>
+
+<div class="tool-box">
+<h3>Anticipation</h3>
+<p>
+Aide à prévoir les renouvellements de matériel et les besoins futurs de l’organisation.
+</p>
+</div>
+
+<div class="tool-box">
+<h3>Organisation</h3>
+<p>
+Centralise les informations utiles pour une gestion plus claire et plus efficace du parc informatique.
+</p>
+</div>
+</div>
+</div>
+
+<div class="parc-large">
+<h2>Outils utilisés pour la gestion de parc</h2>
+<p>
+Pour assurer la gestion et le suivi d’un parc informatique, plusieurs outils peuvent être utilisés
+afin de centraliser les informations et simplifier l’administration.
+</p>
+
+<div class="tools-grid">
+<div class="tool-box">
+<h3>GLPI</h3>
+<p>
+GLPI permet de gérer l’inventaire du matériel, le suivi des équipements, les tickets d’incidents et la documentation.
+</p>
+</div>
+
+<div class="tool-box">
+<h3>OCS Inventory</h3>
+<p>
+Cet outil permet de remonter automatiquement les informations matérielles et logicielles des postes du parc.
+</p>
+</div>
+
+<div class="tool-box">
+<h3>Tableaux de suivi</h3>
+<p>
+Ils peuvent être utilisés pour organiser l’inventaire, suivre les affectations et garder une trace des interventions.
+</p>
+</div>
+</div>
+</div>
+
+<div class="parc-large">
+<h2>Exemple d’utilisation dans ma formation</h2>
+<p>
+Dans le cadre de ma formation, j’ai pu utiliser <strong>GLPI</strong> pour la gestion du parc informatique.
+Cet outil permet de recenser les équipements, de suivre leur état et de mieux organiser
+les demandes d’assistance et les interventions techniques.
+</p>
+
+<div class="sources-list">
+<div class="source-item">
+<h3>Inventaire</h3>
+<p>
+Recensement des ordinateurs, périphériques et autres équipements présents dans le parc.
+</p>
+</div>
+
+<div class="source-item">
+<h3>Suivi des incidents</h3>
+<p>
+Gestion des tickets pour mieux organiser les demandes et le support utilisateur.
+</p>
+</div>
+
+<div class="source-item">
+<h3>Centralisation</h3>
+<p>
+Regroupement des informations utiles sur une même plateforme pour faciliter l’administration.
+</p>
+</div>
+
+<div class="source-item">
+<h3>Vision globale</h3>
+<p>
+Meilleure connaissance de l’infrastructure et des équipements utilisés au quotidien.
+</p>
+</div>
+</div>
+</div>
+
+<div class="highlight-box">
+<h2>Conclusion</h2>
+<p>
+La gestion de parc informatique est un élément essentiel dans l’administration d’un système d’information.
+Elle permet de mieux organiser les équipements, de faciliter la maintenance et d’assurer un suivi précis du matériel et des logiciels.
+</p>
+
+<p>
+Grâce à cette démarche, il est possible d’améliorer la réactivité du support,
+de mieux planifier les besoins et de garantir une gestion plus efficace de l’environnement informatique.
+</p>
+
+<p>
+Dans le cadre du BTS SIO SISR, la gestion de parc fait partie des compétences importantes
+car elle contribue directement à l’exploitation et au maintien en condition opérationnelle des infrastructures.
+</p>
+</div>
+
+</div>
+
+<script src="js/menu.js"></script>
+<script src="js/network-bg.js"></script>
+
+</body>
+</html>

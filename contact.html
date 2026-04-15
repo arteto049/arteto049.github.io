@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Portfolio BTS SIO</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- icones -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* LAYOUT CONTACT */
+
+.contact-layout{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+margin-top:60px;
+}
+
+/* INFOS */
+
+.contact-info p{
+font-size:1.15rem;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+.contact-item{
+margin-bottom:20px;
+font-size:1.1rem;
+}
+
+.contact-item i{
+color:#58a6ff;
+margin-right:10px;
+}
+
+/* RESEAUX */
+
+.social-links{
+margin-top:30px;
+display:flex;
+gap:15px;
+}
+
+.social-links a{
+display:flex;
+align-items:center;
+justify-content:center;
+width:45px;
+height:45px;
+background:#161b22;
+border:1px solid #30363d;
+border-radius:8px;
+color:#c9d1d9;
+font-size:20px;
+transition:0.3s;
+}
+
+.social-links a:hover{
+background:#58a6ff;
+color:white;
+transform:translateY(-3px);
+}
+
+/* FORMULAIRE */
+
+form{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+input, textarea{
+padding:14px;
+border-radius:6px;
+border:1px solid #30363d;
+background:#161b22;
+color:#c9d1d9;
+font-family:inherit;
+font-size:1rem;
+}
+
+textarea{
+min-height:150px;
+resize:vertical;
+}
+
+button{
+padding:12px;
+border:none;
+background:#58a6ff;
+color:white;
+font-size:1rem;
+font-weight:600;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#3b82f6;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+.contact-layout{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+<canvas id="network-bg"></canvas>
+
+<header>
+
+<a href="index.html" class="home-btn">
+<i class="fa-solid fa-house"></i> Accueil
+</a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</header>
+
+<!-- MENU BURGER -->
+
+<div class="menu" id="menu">
+
+<ul>
+
+<li><a href="index.html">Accueil</a></li>
+<li><a href="parc.html">Gestion de parc</a></li>
+<li><a href="veille.html">Veille technologique</a></li>
+<li class="submenu-parent">
+
+    <div class="submenu-head">
+        <a href="e5.html" class="submenu-title">Epreuve E5</a>
+        <i class="fa-solid fa-chevron-down submenu-arrow" onclick="toggleSubmenu()"></i>
+    </div>
+
+    <ul class="submenu" id="submenu-e5">
+        <li><a href="e5-patrimoine.html">Gérer le patrimoine informatique</a></li>
+        <li><a href="e5-support.html">Répondre aux incidents et aux demandes d’assistance</a></li>
+        <li><a href="e5-developpement.html">Développer la présence en ligne</a></li>
+        <li><a href="e5-modeprojet.html">Travailler en mode projet</a></li>
+        <li><a href="e5-dispo-utilisateurs.html">Mettre à disposition des utilisateurs un service</a></li>
+        <li><a href="e5-dev-pro.html">Organiser son développement professionnel</a></li>
+    </ul>
+
+</li>
+<li><a href="e6.html">Epreuve E6</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</div>
+
+<!-- CONTENU -->
+
+<div class="container fade-up">
+
+<h1 style="font-size:2.8rem;">Contact</h1>
+
+<div class="contact-layout">
+
+<!-- COLONNE INFOS -->
+
+<div class="contact-info">
+
+<p>
+Si vous souhaitez échanger avec moi à propos de mes projets,
+de mon parcours en BTS SIO ou d'une opportunité professionnelle,
+vous pouvez me contacter via les informations ci-dessous ou via le formulaire.
+</p>
+
+<div class="contact-item">
+<i class="fa-solid fa-envelope"></i>
+<a href="mailto:tonmail@email.com">tonmail@email.com</a>
+</div>
+
+<div class="contact-item">
+<i class="fa-brands fa-linkedin"></i>
+<a href="#">LinkedIn</a>
+</div>
+
+<div class="contact-item">
+<i class="fa-brands fa-github"></i>
+<a href="#">GitHub</a>
+</div>
+
+<!-- reseaux -->
+
+<div class="social-links">
+
+<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+
+<a href="#"><i class="fa-brands fa-github"></i></a>
+
+<a href="mailto:tonmail@email.com"><i class="fa-solid fa-envelope"></i></a>
+
+</div>
+
+</div>
+
+<!-- COLONNE FORMULAIRE -->
+
+<div>
+
+<form>
+
+<input type="text" placeholder="Votre nom" required>
+
+<input type="email" placeholder="Votre email" required>
+
+<textarea placeholder="Votre message" required></textarea>
+
+<button type="submit">Envoyer le message</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Portfolio BTS SIO</p>
+
+</footer>
+
+<script src="js/menu.js"></script>
+<script src="js/network-bg.js"></script>
+
+</body>
+</html>

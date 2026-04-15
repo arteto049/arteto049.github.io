@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Epreuve E6 - Portfolio BTS SIO</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* TIMELINE */
+
+.timeline{
+border-left:3px solid #58a6ff;
+padding-left:30px;
+margin-top:60px;
+}
+
+.timeline-item{
+margin-bottom:50px;
+position:relative;
+}
+
+.timeline-item::before{
+content:'';
+position:absolute;
+left:-38px;
+top:5px;
+width:14px;
+height:14px;
+background:#58a6ff;
+border-radius:50%;
+}
+
+.timeline-item h3{
+font-size:1.6rem;
+margin-bottom:10px;
+}
+
+/* TECHNOLOGIES */
+
+.tech-section{
+margin-top:80px;
+}
+
+.tech-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.tech-card{
+background:#161b22;
+border:1px solid #30363d;
+padding:25px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.tech-card:hover{
+transform:translateY(-5px);
+border-color:#58a6ff;
+}
+
+.tech-card h4{
+margin-bottom:10px;
+color:#58a6ff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+<canvas id="network-bg"></canvas>
+
+<header>
+
+<a href="index.html" class="home-btn">
+<i class="fa-solid fa-house"></i> Accueil
+</a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</header>
+
+<!-- MENU -->
+
+<div class="menu" id="menu">
+
+<ul>
+
+<li><a href="index.html">Accueil</a></li>
+<li><a href="parc.html">Gestion de parc</a></li>
+<li><a href="veille.html">Veille technologique</a></li>
+<li class="submenu-parent">
+
+    <div class="submenu-head">
+        <a href="e5.html" class="submenu-title">Epreuve E5</a>
+        <i class="fa-solid fa-chevron-down submenu-arrow" onclick="toggleSubmenu()"></i>
+    </div>
+
+    <ul class="submenu" id="submenu-e5">
+        <li><a href="e5-patrimoine.html">Gérer le patrimoine informatique</a></li>
+        <li><a href="e5-support.html">Répondre aux incidents et aux demandes d’assistance</a></li>
+        <li><a href="e5-developpement.html">Développer la présence en ligne</a></li>
+        <li><a href="e5-modeprojet.html">Travailler en mode projet</a></li>
+        <li><a href="e5-dispo-utilisateurs.html">Mettre à disposition des utilisateurs un service</a></li>
+        <li><a href="e5-dev-pro.html">Organiser son développement professionnel</a></li>
+    </ul>
+
+</li>
+<li><a href="e6.html">Epreuve E6</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</div>
+
+<!-- CONTENU -->
+
+<div class="container fade-up">
+
+<h1 style="font-size:2.8rem;">Epreuve E6</h1>
+
+<p style="font-size:1.2rem; line-height:1.8; margin-top:20px;">
+L’épreuve E6 du BTS SIO consiste à présenter des situations professionnelles
+mettant en œuvre des compétences en administration systèmes et réseaux.
+Les projets présentés ci-dessous illustrent la mise en place et la supervision
+d’une infrastructure informatique complète.
+</p>
+
+<!-- TIMELINE PROJETS -->
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>Mise en place de l'infrastructure réseau</h3>
+
+<p>
+Création d'une infrastructure réseau segmentée utilisant des VLAN afin de séparer
+les différents services de l’entreprise. Cette architecture permet d'améliorer
+la sécurité et la gestion du réseau.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>Déploiement du serveur Active Directory</h3>
+
+<p>
+Installation et configuration d’un contrôleur de domaine permettant la gestion
+centralisée des utilisateurs, des postes et des permissions dans l’entreprise.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>Mise en place de la supervision avec Zabbix</h3>
+
+<p>
+Installation d’un serveur Zabbix afin de superviser les machines virtualisées,
+les services et l’état du réseau. Cette solution permet de détecter rapidement
+les anomalies et d'améliorer la maintenance.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>Configuration du pare-feu pfSense</h3>
+
+<p>
+Déploiement d’un pare-feu pfSense pour contrôler les flux réseau, protéger
+l’infrastructure et sécuriser l’accès aux différents services.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>Mise en place d'un serveur de sauvegarde</h3>
+
+<p>
+Configuration d’un serveur de sauvegarde afin de sécuriser les données
+et permettre une restauration rapide en cas de panne ou de perte de données.
+</p>
+
+</div>
+
+</div>
+
+<!-- TECHNOLOGIES -->
+
+<div class="tech-section">
+
+<h2 style="font-size:2.2rem;">Technologies utilisées</h2>
+
+<div class="tech-grid">
+
+<div class="tech-card">
+<h4>Zabbix</h4>
+<p>Solution de supervision permettant de surveiller les serveurs et les équipements réseau.</p>
+</div>
+
+<div class="tech-card">
+<h4>pfSense</h4>
+<p>Pare-feu open source utilisé pour sécuriser l'infrastructure et gérer les flux réseau.</p>
+</div>
+
+<div class="tech-card">
+<h4>Active Directory</h4>
+<p>Service de gestion des utilisateurs, des groupes et des ressources réseau.</p>
+</div>
+
+<div class="tech-card">
+<h4>Virtualisation</h4>
+<p>Utilisation de machines virtuelles pour déployer et tester les services de l’infrastructure.</p>
+</div>
+
+<div class="tech-card">
+<h4>Serveur de sauvegarde</h4>
+<p>Mise en place d’une solution de backup pour sécuriser les données de l’entreprise.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Portfolio BTS SIO</p>
+
+</footer>
+
+<script src="js/menu.js"></script>
+<script src="js/network-bg.js"></script>
+
+</body>
+</html>

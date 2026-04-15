@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Création du site web - Portfolio</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+.fiche-activite{
+max-width:1000px;
+margin:40px auto;
+padding:20px;
+}
+
+.fiche-header{
+margin-bottom:50px;
+}
+
+.fiche-header h1{
+font-size:2.7rem;
+margin-bottom:20px;
+color:#58a6ff;
+line-height:1.3;
+}
+
+.fiche-header p{
+font-size:1.1rem;
+line-height:1.9;
+color:#b8c1cc;
+}
+
+.fiche-section{
+background:#161b22;
+border:1px solid #30363d;
+border-radius:16px;
+padding:30px;
+margin-bottom:30px;
+transition:0.3s;
+}
+
+.fiche-section:hover{
+border-color:#58a6ff;
+transform:translateY(-4px);
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+.fiche-section h2{
+font-size:1.8rem;
+margin-bottom:18px;
+color:#58a6ff;
+}
+
+.fiche-section p{
+font-size:1rem;
+line-height:1.9;
+color:#c9d1d9;
+margin-bottom:15px;
+}
+
+.fiche-section ul{
+padding-left:20px;
+color:#c9d1d9;
+}
+
+.fiche-section li{
+margin-bottom:10px;
+line-height:1.7;
+}
+
+.competences-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.competence-card{
+background:#0d1117;
+border:1px solid #30363d;
+border-radius:14px;
+padding:22px;
+}
+
+.competence-card h3{
+color:#58a6ff;
+margin-bottom:12px;
+font-size:1.2rem;
+}
+
+.competence-card p{
+color:#b8c1cc;
+font-size:0.97rem;
+line-height:1.7;
+margin:0;
+}
+
+.back-links{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:30px;
+}
+
+.back-links a{
+display:inline-block;
+text-decoration:none;
+background:#161b22;
+border:1px solid #30363d;
+color:#c9d1d9;
+padding:10px 18px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.back-links a:hover{
+border-color:#58a6ff;
+color:#58a6ff;
+transform:translateY(-2px);
+}
+
+@media (max-width:768px){
+
+.fiche-header h1{
+font-size:2.1rem;
+}
+
+.fiche-section{
+padding:22px;
+}
+
+.fiche-section h2{
+font-size:1.5rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="network-bg"></canvas>
+
+<header>
+
+<a href="../index.html" class="home-btn">
+<i class="fa-solid fa-house"></i> Accueil
+</a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</header>
+
+<div class="menu" id="menu">
+
+<ul>
+<li><a href="../index.html">Accueil</a></li>
+<li><a href="../parc.html">Gestion de parc</a></li>
+<li><a href="../veille.html">Veille technologique</a></li>
+<li class="submenu-parent">
+
+    <div class="submenu-head">
+        <a href="../e5.html" class="submenu-title">Epreuve E5</a>
+        <i class="fa-solid fa-chevron-down submenu-arrow" onclick="toggleSubmenu()"></i>
+    </div>
+
+    <ul class="submenu" id="submenu-e5">
+        <li><a href="../e5-patrimoine.html">Gérer le patrimoine informatique</a></li>
+        <li><a href="../e5-support.html">Répondre aux incidents et aux demandes d’assistance</a></li>
+        <li><a href="../e5-developpement.html">Développer la présence en ligne</a></li>
+        <li><a href="../e5-modeprojet.html">Travailler en mode projet</a></li>
+        <li><a href="../e5-dispo-utilisateurs.html">Mettre à disposition des utilisateurs un service</a></li>
+        <li><a href="../e5-dev-pro.html">Organiser son développement professionnel</a></li>
+    </ul>
+
+</li>
+<li><a href="../e6.html">Epreuve E6</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</div>
+
+<main class="container fade-up fiche-activite">
+
+<section class="fiche-header">
+<h1>Création du site web - Portfolio</h1>
+<p>
+Cette activité a été réalisée dans le cadre de ma formation en BTS SIO option SISR.
+Elle m’a permis de concevoir et développer un site web personnel destiné à présenter
+mon parcours, mes compétences, mes réalisations et mes situations professionnelles.
+</p>
+</section>
+
+<section class="fiche-section">
+<h2>Contexte</h2>
+<p>
+Dans le cadre de la préparation de mes épreuves professionnelles du BTS SIO,
+j’ai réalisé un site web de type portfolio afin de mettre en valeur mes compétences,
+mes activités et mes projets menés pendant ma formation.
+</p>
+
+<p>
+L’objectif de ce site était de centraliser dans une même interface les différentes
+rubriques importantes de mon parcours, comme la gestion de parc, la veille technologique,
+les épreuves E5 et E6, ainsi qu’une page de contact.
+</p>
+
+<p>
+Ce portfolio devait être à la fois fonctionnel, clair, moderne et facilement navigable,
+afin de pouvoir être présenté dans un cadre professionnel ou devant un jury.
+</p>
+</section>
+
+<section class="fiche-section">
+<h2>Description de l’activité</h2>
+<p>
+J’ai commencé par réfléchir à la structure générale du site, en définissant les pages
+principales, leur organisation et la manière dont les visiteurs pourraient naviguer
+d’une rubrique à une autre.
+</p>
+
+<p>
+J’ai ensuite développé le portfolio en HTML, CSS et JavaScript, en mettant en place
+une interface sobre et professionnelle adaptée à la présentation de mes activités.
+J’ai conçu une page d’accueil avec plusieurs sections visuelles, un menu de navigation,
+des pages dédiées à l’épreuve E5 et à l’épreuve E6, ainsi que des fiches d’activités détaillées.
+</p>
+
+<p>
+Un travail particulier a été réalisé sur l’ergonomie du site, notamment avec
+une navigation simple, des cartes cliquables, une structure claire et un design cohérent
+sur l’ensemble des pages. J’ai également ajouté des éléments visuels tels que des images,
+des icônes et une mise en page alternée pour améliorer la lisibilité.
+</p>
+
+<p>
+Enfin, cette activité m’a amené à corriger, tester et améliorer progressivement le site,
+afin qu’il soit adapté à une présentation professionnelle.
+</p>
+</section>
+
+<section class="fiche-section">
+<h2>Tâches réalisées</h2>
+<ul>
+<li>Analyse du besoin et définition de la structure du portfolio</li>
+<li>Création des différentes pages du site web</li>
+<li>Développement de l’interface en HTML, CSS et JavaScript</li>
+<li>Mise en place d’un menu de navigation clair et accessible</li>
+<li>Création de pages dédiées aux compétences de l’épreuve E5</li>
+<li>Création de fiches d’activités détaillées pour les réalisations</li>
+<li>Ajout d’éléments visuels et amélioration de l’ergonomie</li>
+<li>Tests, corrections et ajustements de la mise en page</li>
+</ul>
+</section>
+
+<section class="fiche-section">
+<h2>Compétences mobilisées</h2>
+
+<div class="competences-grid">
+
+<div class="competence-card">
+<h3>Développer la présence en ligne de l’organisation</h3>
+<p>
+La création de ce portfolio m’a permis de concevoir un support numérique
+mettant en valeur mes activités, mes compétences et mes réalisations.
+Cette activité s’inscrit dans une logique de présence en ligne, avec
+une présentation claire et structurée de contenus professionnels.
+</p>
+</div>
+
+<div class="competence-card">
+<h3>Organiser son développement professionnel</h3>
+<p>
+Le portfolio m’a permis de structurer mon parcours, de valoriser mes compétences
+et de présenter mes expériences de manière professionnelle. Il constitue également
+un outil utile pour suivre mon évolution et mettre à jour régulièrement mes réalisations.
+</p>
+</div>
+
+<div class="competence-card">
+<h3>Travailler en mode projet</h3>
+<p>
+La réalisation de ce site s’est faite de manière progressive, en suivant plusieurs étapes :
+analyse du besoin, organisation des pages, développement, tests et améliorations.
+Cette activité m’a permis d’adopter une démarche structurée proche d’un projet informatique.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="fiche-section">
+<h2>Conclusion</h2>
+<p>
+Cette activité m’a permis de concevoir un site web personnel complet et structuré,
+adapté à la présentation de mon parcours en BTS SIO.
+</p>
+
+<p>
+J’ai pu renforcer mes compétences en conception de site web, en organisation de contenu,
+en ergonomie et en valorisation de mes réalisations professionnelles.
+</p>
+
+<p>
+La création de ce portfolio représente un support important pour mes épreuves,
+mais aussi un outil utile pour présenter mon profil dans un contexte professionnel.
+Elle s’inscrit pleinement dans ma démarche de développement professionnel.
+</p>
+</section>
+
+<div class="back-links">
+<a href="../e5-developpement.html"><i class="fa-solid fa-arrow-left"></i> Retour E5 Présence en ligne</a>
+<a href="../e5-dev-pro.html"><i class="fa-solid fa-arrow-left"></i> Retour E5 Développement professionnel</a>
+<a href="../e5-modeprojet.html"><i class="fa-solid fa-arrow-left"></i> Retour E5 Mode projet</a>
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 Portfolio BTS SIO</p>
+</footer>
+
+<script src="../js/menu.js"></script>
+<script src="../js/network-bg.js"></script>
+
+</body>
+</html>

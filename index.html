@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accueil - Portfolio BTS SIO</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/index.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+<canvas id="network-bg"></canvas>
+
+<header>
+
+<a href="index.html" class="home-btn">
+<i class="fa-solid fa-house"></i> Accueil
+</a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</header>
+
+<!-- MENU -->
+
+<div class="menu" id="menu">
+
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="parc.html">Gestion de parc</a></li>
+<li><a href="veille.html">Veille technologique</a></li>
+<li class="submenu-parent">
+
+    <div class="submenu-head">
+        <a href="e5.html" class="submenu-title">Epreuve E5</a>
+        <i class="fa-solid fa-chevron-down submenu-arrow" onclick="toggleSubmenu()"></i>
+    </div>
+
+    <ul class="submenu" id="submenu-e5">
+        <li><a href="e5-patrimoine.html">Gérer le patrimoine informatique</a></li>
+        <li><a href="e5-support.html">Répondre aux incidents et aux demandes d’assistance</a></li>
+        <li><a href="e5-developpement.html">Développer la présence en ligne</a></li>
+        <li><a href="e5-modeprojet.html">Travailler en mode projet</a></li>
+        <li><a href="e5-dispo-utilisateurs.html">Mettre à disposition des utilisateurs un service</a></li>
+        <li><a href="e5-dev-pro.html">Organiser son développement professionnel</a></li>
+    </ul>
+
+</li>
+<li><a href="e6.html">Epreuve E6</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</div>
+
+
+<main class="container">
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Da Silva Aristide</h1>
+
+<p class="hero-description">
+
+Je suis étudiant en BTS SIO option SISR (Solutions d’Infrastructure, Systèmes et Réseaux).
+Ce portfolio présente mes compétences, mes projets et les différentes réalisations
+effectuées dans le cadre de ma formation.
+
+</p>
+
+<a href="documents/cv.pdf" class="btn-cv" target="_blank">
+<i class="fa-solid fa-download"></i>
+Télécharger mon CV
+</a>
+
+</section>
+
+
+<!-- SECTIONS -->
+
+<section class="index-section">
+
+<a href="parc.html" class="section-text">
+
+<h2>Gestion de parc</h2>
+
+
+<p>
+Cette page présente les outils et méthodes utilisés pour gérer le parc informatique
+et suivre les équipements d’une infrastructure.
+</p>
+</a>
+
+</div>
+
+<div class="section-image">
+<img src="images/Cloud hosting-cuate (1).png" alt="Gestion de parc">
+</div>
+
+</section>
+
+
+<section class="index-section reverse">
+
+<a href="veille.html" class="section-text">
+
+<h2>Veille technologique</h2>
+
+<p>
+Cette rubrique présente mon travail de veille sur les nouvelles technologies
+liées aux systèmes, aux réseaux et à la cybersécurité.
+</p>
+
+</a>
+
+<div class="section-image">
+<img src="images/Web devices-amico.png" alt="Veille technologique">
+</div>
+
+</section>
+
+
+<section class="index-section">
+
+<a href="e5.html" class="section-text">
+
+<h2>Épreuve E5</h2>
+
+<p>
+Présentation des activités réalisées et des compétences mises en œuvre
+dans le cadre de l’épreuve E5 du BTS SIO.
+</p>
+
+</a>
+
+<div class="section-image">
+<img src="images/Cloud hosting-amico (2).png" alt="Epreuve E5">
+</div>
+
+</section>
+
+
+<section class="index-section reverse">
+
+<a href="e6.html" class="section-text">
+
+<h2>Épreuve E6</h2>
+
+<p>
+Cette page présente les situations professionnelles réalisées
+dans le cadre de l’épreuve E6 ainsi que les projets menés.
+</p>
+
+</a>
+
+<div class="section-image">
+<img src="images/Version control-cuate.png" alt="Epreuve E6">
+</div>
+
+</section>
+
+
+<section class="index-section">
+
+<a href="contact.html" class="section-text">
+
+<h2>Contact</h2>
+
+<p>
+Retrouvez ici mes informations de contact pour toute demande
+d’échange professionnel ou d’information complémentaire.
+</p>
+
+</a>
+
+<div class="section-image">
+<img src="images/Contact us-rafiki.png" alt="Contact">
+</div>
+
+</section>
+
+
+</main>
+
+<footer>
+
+<p>© 2026 Portfolio BTS SIO</p>
+
+</footer>
+
+<script src="js/menu.js"></script>
+<script src="js/network-bg.js"></script>
+
+
+</body>
+</html>
