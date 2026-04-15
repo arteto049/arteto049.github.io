@@ -26,7 +26,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 box-shadow:0 2px 10px rgba(0,0,0,0.3);
-z-index:1000;
+z-index:10000;
 }
 
 .logo{
@@ -56,7 +56,7 @@ padding-top:90px;
 transition:0.4s;
 box-shadow:-2px 0 10px rgba(0,0,0,0.3);
 border-left:1px solid #30363d;
-
+z-index:9999;
 max-height:80vh;
 overflow-y:auto;
 }
@@ -443,6 +443,26 @@ box-shadow:0 12px 25px rgba(88,166,255,0.35);
 font-size:1.1rem;
 }
 
+.menu-close{
+position:absolute;
+top:20px;
+right:20px;
+background:none;
+border:none;
+color:#c9d1d9;
+font-size:22px;
+cursor:pointer;
+line-height:1;
+padding:6px 10px;
+border-radius:6px;
+transition:0.2s;
+}
+
+.menu-close:hover{
+color:#58a6ff;
+background:#30363d;
+}
+
 .submenu-parent{
 display:block;
 }
@@ -498,6 +518,9 @@ background:#58a6ff;
 text-decoration:none;
 color:inherit;
 flex:1;
+display:block;
+padding:4px 0;
+cursor:pointer;
 }
 
 .submenu-arrow{
